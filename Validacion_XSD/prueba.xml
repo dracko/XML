@@ -1,0 +1,16 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE usuario SYSTEM "test.dtd">
+<usuario id="L-001">
+	<nombre>David Vazquez</nombre>
+	<edad>29</edad>
+	<fechaNac>1993-05-16</fechaNac>
+</usuario>
+	-->
+<!-- <!DOCTYPE usuario SYSTEM "test.dtd">-->
+<usuario  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="test2.xsd">
+
+	<nombre>David Vazquez</nombre>
+	<edad>29</edad>
+	<fechaNac>1993-05-16</fechaNac>
+</usuario>

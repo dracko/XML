@@ -1,0 +1,7 @@
+<!ELEMENT usuario (nombre, edad, fechaNac)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT fechaNac (#PCDATA)>
+
+<!ATTLIST usuario id ID #REQUIRED>
