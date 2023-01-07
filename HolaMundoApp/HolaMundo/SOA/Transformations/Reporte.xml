@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<reporte>
+  <cliente>
+    <nombre></nombre>
+    <direccion></direccion>
+  </cliente>
+  <sucursal>
+    <id></id>
+    <detalle></detalle>
+  </sucursal>
+  <detalleProductos>
+    <elMasCaro>
+      <id></id>
+      <precio></precio>
+    </elMasCaro>
+    <elMasBarato>
+      <id></id>
+      <precio></precio>
+    </elMasBarato>
+    <productos>
+      <producto>
+        <id></id>
+        <precio></precio>
+      </producto>
+    </productos>
+  </detalleProductos>
+</reporte>

@@ -1,0 +1,20 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="qualified">
+	<xs:element name="root" type="rootType"/>
+	<xs:complexType name="rootType">
+		<xs:sequence>
+			<xs:element name="product_list"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="productListType">
+		<xs:sequence>
+			<xs:element name="product" type="productType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="productType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:integer"/>
+			<xs:element name="precio" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

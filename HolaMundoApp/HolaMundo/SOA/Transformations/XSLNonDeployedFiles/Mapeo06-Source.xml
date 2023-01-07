@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<infoCliente xmlns="http://www.example.org">
+   <nombre>David</nombre>
+   <apePaterno>Vázquez</apePaterno>
+   <apeMaterno>Ayala</apeMaterno>
+   <fechaRegistro>2023-01-06</fechaRegistro>
+</infoCliente>

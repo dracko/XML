@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ns0:resumen xmlns:ns0="http://www.example.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org file:/C:/JDeveloper/mywork/HolaMundoApp/HolaMundo/SOA/xsd/VentaSchema.xsd">
+   <ns0:fecha>2-12-2022</ns0:fecha>
+   <ns0:cantidadDeProductos>6</ns0:cantidadDeProductos>
+   <ns0:total>60</ns0:total>
+</ns0:resumen>

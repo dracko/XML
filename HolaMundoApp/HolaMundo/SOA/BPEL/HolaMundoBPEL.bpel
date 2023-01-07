@@ -1,0 +1,61 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer
+
+  Created: Mon Dec 26 18:14:59 CST 2022
+  Author:  David
+  Type: BPEL 2.0 Process
+  Purpose: Empty BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<process name="HolaMundoBPEL"
+               targetNamespace="http://xmlns.oracle.com/HolaMundoApp/HolaMundo/HolaMundoBPEL"
+               xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+               xmlns:client="http://xmlns.oracle.com/HolaMundoApp/HolaMundo/HolaMundoBPEL"
+               xmlns:ora="http://schemas.oracle.com/xpath/extension"
+               xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
+               xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:ns1="http://oracle.com/sca/soapservice/HolaMundoApp/HolaMundo/HolaMundoService"
+         xmlns:ns2="http://xmlns.oracle.com/singleString"
+         xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc"
+         xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions"
+         xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20"
+         xmlns:ess="http://xmlns.oracle.com/scheduler" xmlns:hwf="http://xmlns.oracle.com/bpel/workflow/xpath"
+         xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions"
+         xmlns:dvm="http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue"
+         xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/"
+         xmlns:xdk="http://schemas.oracle.com/bpel/extension/xpath/function/xdk"
+         xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath"
+         xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap" xmlns:ui="http://xmlns.oracle.com/soa/designer">
+
+  <!--
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     ORCHESTRATION LOGIC
+     Set of activities coordinating the flow of messages across the
+     services integrated within this business process
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <import namespace="http://oracle.com/sca/soapservice/HolaMundoApp/HolaMundo/HolaMundoService"
+          location="../WSDLs/HolaMundoServiceWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"
+          ui:processWSDL="true"/>
+  <partnerLinks>
+    <partnerLink name="HolaMundoService" partnerLinkType="ns1:HolaMundoService" myRole="execute_ptt"/>
+  </partnerLinks>
+  <variables>
+    <variable name="Receive_execute_InputVariable" messageType="ns1:requestMessage"/>
+    <variable name="Reply_execute_OutputVariable" messageType="ns1:replyMessage"/>
+  </variables>
+  <sequence name="main">
+    <receive name="Receive" createInstance="yes" partnerLink="HolaMundoService" portType="ns1:execute_ptt"
+             operation="execute" variable="Receive_execute_InputVariable"/>
+    <assign name="Assign">
+      <copy>
+        <from>concat("Hola mundo: ", $Receive_execute_InputVariable.entrada)</from>
+        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$Reply_execute_OutputVariable.respuesta</to>
+      </copy>
+    </assign>
+    <reply name="Reply" partnerLink="HolaMundoService" variable="Reply_execute_OutputVariable"
+           portType="ns1:execute_ptt" operation="execute"/>
+  </sequence>
+</process>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<productos xmlns="http://www.example.org">
+   <fechaIngreso>
+      <dia>1</dia>
+      <mes>2</mes>
+      <anio>3</anio>
+   </fechaIngreso>
+   <completo>completo4</completo>
+   <listaDeProductos>
+      <producto>
+         <id>5</id>
+         <precio>6</precio>
+      </producto>
+      <producto>
+         <id>7</id>
+         <precio>8</precio>
+      </producto>
+      <producto>
+         <id>9</id>
+         <precio>10</precio>
+      </producto>
+   </listaDeProductos>
+</productos>

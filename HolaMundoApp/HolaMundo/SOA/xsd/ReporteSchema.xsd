@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org"
+            targetNamespace="http://www.example.org" elementFormDefault="qualified">
+  <xsd:element name="reporte">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cliente">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="nombre"/>
+              <xsd:element name="direccion"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="sucursal">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="id"/>
+              <xsd:element name="detalle"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="detalleProductos">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="elMasCaro">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="id"/>
+                    <xsd:element name="precio"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="elMasBarato">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="id"/>
+                    <xsd:element name="precio"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="productos">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="producto">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="id"/>
+                          <xsd:element name="precio"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

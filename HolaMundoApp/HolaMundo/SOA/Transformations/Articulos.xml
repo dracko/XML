@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<articulos>
+  <arcticulo>
+    <id>1</id>
+    <precio>15</precio>
+  </arcticulo>
+  <arcticulo>
+    <id>2</id>
+    <precio>20</precio>
+  </arcticulo>
+  <arcticulo>
+    <id>3</id>
+    <precio>30</precio>
+  </arcticulo>
+  <arcticulo>
+    <id>4</id>
+    <precio>15</precio>
+  </arcticulo>
+  <arcticulo>
+    <id>5</id>
+    <precio>20</precio>
+  </arcticulo>
+</articulos>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sucursal xmlns="http://www.example.org">
+   <id>id406</id>
+   <nombre>nombre407</nombre>
+   <direccion>
+      <calle>calle408</calle>
+      <numero>409</numero>
+      <colonia>colonia410</colonia>
+      <ciudad>ciudad411</ciudad>
+      <estado>estado412</estado>
+      <cp>413</cp>
+   </direccion>
+</sucursal>

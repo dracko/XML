@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<articulos xmlns="http://www.example.org">
+   <arcticulo>
+      <id>414</id>
+      <precio>415</precio>
+   </arcticulo>
+   <arcticulo>
+      <id>416</id>
+      <precio>417</precio>
+   </arcticulo>
+   <arcticulo>
+      <id>418</id>
+      <precio>419</precio>
+   </arcticulo>
+</articulos>

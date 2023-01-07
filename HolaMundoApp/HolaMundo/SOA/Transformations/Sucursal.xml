@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sucursal>
+  <id>L23</id>
+  <nombre>San Jose</nombre>
+  <direccion>
+    <calle>2 Norte</calle>
+    <numero>15</numero>
+    <colonia>San Jose</colonia>
+    <ciudad>Culiacan</ciudad>
+    <estado>Sinaloa</estado>
+    <cp>58694</cp>
+  </direccion>
+</sucursal>

@@ -1,0 +1,47 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="qualified">
+	
+	<!-- Elementos simples-->
+	<xs:element name="nombre">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="30"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="edad">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:minExclusive value="0"/>
+				<xs:maxExclusive value="101"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="fechaNac">
+		<xs:simpleType>
+			<xs:restriction base="xs:date">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+		
+	<!--elemento raiz-->
+    <xs:element name="usuario">
+        <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="nombre" />
+                    <xs:element ref="edad" />
+                    <xs:element ref="fechaNac"/>
+                <xs:sequence>
+      <xs:element name="fechaRegistro">
+		<xs:simpleType>
+			<xs:restriction base="xs:date">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+    </xs:sequence>
+   </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

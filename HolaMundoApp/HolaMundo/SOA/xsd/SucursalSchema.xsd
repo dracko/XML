@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org"
+            targetNamespace="http://www.example.org" elementFormDefault="qualified">
+  <xsd:element name="sucursal">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="id" type="xsd:string"/>
+        <xsd:element name="nombre" type="xsd:string"/>
+        <xsd:element name="direccion">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="calle" type="xsd:string"/>
+              <xsd:element name="numero" type="xsd:integer"/>
+              <xsd:element name="colonia" type="xsd:string"/>
+              <xsd:element name="ciudad" type="xsd:string"/>
+              <xsd:element name="estado" type="xsd:string"/>
+              <xsd:element name="cp" type="xsd:integer"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

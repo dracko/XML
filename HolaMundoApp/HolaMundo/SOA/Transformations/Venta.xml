@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resumen>
+	<fecha>01/01/2023</fecha>
+	<cantidadDeProductos>5</cantidadDeProductos>
+	<total>150</total>
+        <articulos>
+          <articulo>
+            <id></id>
+          </articulo>
+          <articulo>
+            <id></id>
+          </articulo>
+          <articulo>
+            <id></id>
+          </articulo>
+          <articulo>
+            <id></id>
+          </articulo>
+          <articulo>
+            <id></id>
+          </articulo>
+        </articulos>
+</resumen>

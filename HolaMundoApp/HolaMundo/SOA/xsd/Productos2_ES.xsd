@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="qualified">
+  <xs:element name="raiz" type="tipoRaiz"/>
+    <xs:complexType name="tipoRaiz">
+      <xs:choice>
+        <xs:element name="listado_productos"/>
+      </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="listado_Productos">
+      <xs:sequence>
+        <xs:element name="producto" type="tipoProducto" maxOccurs="unbounded"/>
+      </xs:sequence>  
+    </xs:complexType>
+    <xs:complexType name="tipoProducto">
+      <xs:sequence>
+      <xs:element name="id"/>
+      <xs:element name="precio"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:schema>
